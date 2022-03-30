@@ -12,7 +12,6 @@ scissorsbutton.addEventListener('click',function(){
     game("scissors");
 });
 
-//game();
 
 
 function computerPlay(){
@@ -58,9 +57,6 @@ let playerScore = 0;
 let compScore = 0;
 function game(playerSelection){
     
-
-        //let playerSelection = prompt("Make a decision: ");
-        //playerSelection = playerSelection.toLowerCase();
         const computerSelection = computerPlay();
         let result = playRound(playerSelection, computerSelection);
         if (result.includes("Win"))
@@ -69,8 +65,7 @@ function game(playerSelection){
         }
         else 
             compScore++;
-        
-        //console.log(result);
+
         document.getElementById('result').innerHTML = result;
         document.getElementById('score').innerHTML = playerScore + " - " + compScore;
 
@@ -80,14 +75,6 @@ function game(playerSelection){
         if(compScore == 5){
             document.getElementById('result').innerHTML = "COMPUTER WINS!";
         }
-        //console.log(playerScore + " " + compScore);
-    /*
-    if(playerScore > compScore)
-        console.log("YOU WIN!");
-    else if(playerScore < compScore)
-        console.log("YOU LOSE");
-    else
-        console.log("TIE");
-        */
+
 }
 
